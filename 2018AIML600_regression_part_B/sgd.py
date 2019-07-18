@@ -83,7 +83,7 @@ def calc_rmse(targets, predictions) :
 
 def calc_rse(targets, predictions) :
     import math
-    df = len(targets) - 2;
+    df = len(targets) - 2
     return math.sqrt(np.sum(np.square(targets - predictions))/df)
 
 
