@@ -4,6 +4,8 @@ from math import sqrt
 
 from sklearn.preprocessing import PolynomialFeatures
 
+import warnings
+warnings.simplefilter("ignore")
 
 # Defining a lasso polynomial regressor
 def polynomial_lasso_regressor(deg, X_train, X_test, y_train, y_test) :
@@ -17,8 +19,6 @@ def polynomial_lasso_regressor(deg, X_train, X_test, y_train, y_test) :
     ridge = Ridge()
     ridge.fit(X_poly, y_train)
 
-    print(' COEF :: ', ridge.coef_)
-    print(' INTERCEPT :: ', ridge.intercept_)
     # Predicting training and testing values
     y_predicted = ridge.predict(X_poly)
     y_test_predicted = ridge.predict(X_test_poly)

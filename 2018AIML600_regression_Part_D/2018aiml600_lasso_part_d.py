@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 from math import sqrt
 
 from sklearn.preprocessing import PolynomialFeatures
-
+import warnings
+warnings.simplefilter("ignore")
 
 # Defining a lasso polynomial regressor
 def polynomial_lasso_regressor(deg, X_train, X_test, y_train, y_test) :
